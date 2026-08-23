@@ -1,0 +1,66 @@
+[
+  {
+    "id": "income_current",
+    "question": "What is the income threshold for a household of 3?",
+    "determination_date": "2026-04-25",
+    "change_date": null,
+    "expected_status": "ANSWERED",
+    "expected_clause": "6.6.1"
+  },
+  {
+    "id": "income_old",
+    "question": "What is the income threshold for a household of 3?",
+    "determination_date": "2026-02-15",
+    "change_date": null,
+    "expected_status": "ANSWERED",
+    "expected_clause": "6.6.1"
+  },
+  {
+    "id": "income_missing_date",
+    "question": "What is the income threshold for a household of 3?",
+    "determination_date": null,
+    "change_date": null,
+    "expected_status": "NEEDS_DATE",
+    "expected_clause": null
+  },
+  {
+    "id": "reporting_current",
+    "question": "How long does a recipient have to report a change of circumstances?",
+    "determination_date": null,
+    "change_date": "2026-04-25",
+    "expected_status": "ANSWERED",
+    "expected_clause": "4.3.2"
+  },
+  {
+    "id": "reporting_old",
+    "question": "How long does a recipient have to report a change of circumstances?",
+    "determination_date": null,
+    "change_date": "2026-02-15",
+    "expected_status": "ANSWERED",
+    "expected_clause": "4.3.2"
+  },
+  {
+    "id": "reporting_missing_date",
+    "question": "How long does a recipient have to report a change of circumstances?",
+    "determination_date": null,
+    "change_date": null,
+    "expected_status": "NEEDS_DATE",
+    "expected_clause": null
+  },
+  {
+    "id": "unsupported_general",
+    "question": "What is the capital of France?",
+    "determination_date": null,
+    "change_date": null,
+    "expected_status": "ABSTAIN",
+    "expected_clause": null
+  },
+  {
+    "id": "unsupported_medical",
+    "question": "What medication should I take for a headache?",
+    "determination_date": null,
+    "change_date": null,
+    "expected_status": "ABSTAIN",
+    "expected_clause": null
+  }
+]

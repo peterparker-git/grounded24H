@@ -46,8 +46,7 @@ def resolve_provisions(
         amended = [
             p
             for p in candidates
-            if p.get("supersedes")
-            and p.get("effective_date")
+            if p.get("effective_date")
         ]
 
         base = [
@@ -82,96 +81,92 @@ def resolve_provisions(
                     relevant_date = None
                     required_date = None
 
+                status_map = {}
+
                 # -------------------------------------------------
                 # Date is required but missing
                 # -------------------------------------------------
 
                 if required_date and relevant_date is None:
 
-                    for old in base:
-                        resolved.append({
-                            **old,
+                    for p in candidates:
+                        status_map[id(p)] = {
                             "applicable": False,
                             "needs_date": required_date,
                             "resolution_reason": (
                                 f"{required_date} is required to "
                                 f"resolve amended clause §{clause_id}."
                             ),
-                        })
-
-                    resolved.append({
-                        **amendment,
-                        "applicable": False,
-                        "needs_date": required_date,
-                        "resolution_reason": (
-                            f"{required_date} is required to "
-                            f"resolve amended clause §{clause_id}."
-                        ),
-                    })
-
-                    continue
+                        }
 
                 # -------------------------------------------------
                 # Date available
                 # -------------------------------------------------
 
-                if relevant_date is not None and effective is not None:
+                elif relevant_date is not None and effective is not None:
 
                     if relevant_date >= effective:
 
                         # Amendment wins.
-                        resolved.append({
-                            **amendment,
-                            "applicable": True,
-                            "needs_date": None,
-                            "resolution_reason": (
-                                f"§{clause_id} was amended effective "
-                                f"{effective.isoformat()} and the "
-                                f"relevant date is "
-                                f"{relevant_date.isoformat()}."
-                            ),
-                        })
-
-                        for old in base:
-                            resolved.append({
-                                **old,
-                                "applicable": False,
-                                "needs_date": None,
-                                "resolution_reason": (
-                                    f"Superseded by Amendment No. "
-                                    f"2026-01 effective "
-                                    f"{effective.isoformat()}."
-                                ),
-                            })
+                        for p in candidates:
+                            if p in amended:
+                                status_map[id(p)] = {
+                                    "applicable": True,
+                                    "needs_date": None,
+                                    "resolution_reason": (
+                                        f"§{clause_id} was amended effective "
+                                        f"{effective.isoformat()} and the "
+                                        f"relevant date is "
+                                        f"{relevant_date.isoformat()}."
+                                    ),
+                                }
+                            else:
+                                status_map[id(p)] = {
+                                    "applicable": False,
+                                    "needs_date": None,
+                                    "resolution_reason": (
+                                        f"Superseded by Amendment No. "
+                                        f"2026-01 effective "
+                                        f"{effective.isoformat()}."
+                                    ),
+                                }
 
                     else:
 
                         # Base wins.
-                        for old in base:
-                            resolved.append({
-                                **old,
-                                "applicable": True,
-                                "needs_date": None,
-                                "resolution_reason": (
-                                    f"Relevant date "
-                                    f"{relevant_date.isoformat()} "
-                                    f"is before amendment effective "
-                                    f"date {effective.isoformat()}."
-                                ),
-                            })
+                        for p in candidates:
+                            if p in base:
+                                status_map[id(p)] = {
+                                    "applicable": True,
+                                    "needs_date": None,
+                                    "resolution_reason": (
+                                        f"Relevant date "
+                                        f"{relevant_date.isoformat()} "
+                                        f"is before amendment effective "
+                                        f"date {effective.isoformat()}."
+                                    ),
+                                }
+                            else:
+                                status_map[id(p)] = {
+                                    "applicable": False,
+                                    "needs_date": None,
+                                    "resolution_reason": (
+                                        f"Amendment becomes effective "
+                                        f"{effective.isoformat()}, after the "
+                                        f"relevant date."
+                                    ),
+                                }
 
-                        resolved.append({
-                            **amendment,
-                            "applicable": False,
+                for p in candidates:
+                    info = status_map.get(
+                        id(p),
+                        {
+                            "applicable": True,
                             "needs_date": None,
-                            "resolution_reason": (
-                                f"Amendment becomes effective "
-                                f"{effective.isoformat()}, after the "
-                                f"relevant date."
-                            ),
-                        })
-
-                    continue
+                            "resolution_reason": "No superseding amendment was found.",
+                        },
+                    )
+                    resolved.append({**p, **info})
 
             continue
 

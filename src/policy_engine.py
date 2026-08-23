@@ -104,6 +104,7 @@ def resolve_policy(
             "resolved": [],
             "applicable": [],
             "needs_date": None,
+            "top_score": 0.0,
         }
 
     # ---------------------------------------------------------
@@ -135,6 +136,7 @@ def resolve_policy(
             "resolved": [],
             "applicable": [],
             "needs_date": trigger,
+            "top_score": candidates[0]["score"] if candidates else 0.0,
         }
 
     # ---------------------------------------------------------
@@ -171,6 +173,7 @@ def resolve_policy(
             "resolved": resolved,
             "applicable": [],
             "needs_date": required_date,
+            "top_score": candidates[0]["score"] if candidates else 0.0,
         }
 
     # ---------------------------------------------------------
@@ -185,6 +188,7 @@ def resolve_policy(
             "resolved": resolved,
             "applicable": [],
             "needs_date": None,
+            "top_score": candidates[0]["score"] if candidates else 0.0,
         }
 
     # ---------------------------------------------------------
@@ -198,6 +202,7 @@ def resolve_policy(
         "resolved": resolved,
         "applicable": applicable,
         "needs_date": None,
+        "top_score": candidates[0]["score"] if candidates else 0.0,
     }
 
 

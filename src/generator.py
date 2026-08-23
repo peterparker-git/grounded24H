@@ -52,13 +52,18 @@ Please ask the Program Supervisor.
 """
 
 
+import time
+
 def generate_answer(
     question: str,
     policy_evidence: list[dict],
+    max_retries: int = 5,
+    initial_delay: float = 22.0,
 ) -> str:
     """
     Generate a plain-language answer using ONLY
     the policy evidence resolved by the policy engine.
+    Includes exponential backoff for 429 rate limits.
     """
 
     if not policy_evidence:
@@ -93,12 +98,25 @@ RESOLVED POLICY EVIDENCE:
 Now answer the user's question using ONLY the resolved policy evidence.
 """
 
-    response = client.models.generate_content(
-        model=MODEL,
-        contents=prompt,
-    )
-
-    return response.text.strip()
+    delay = initial_delay
+    for attempt in range(max_retries):
+        try:
+            response = client.models.generate_content(
+                model=MODEL,
+                contents=prompt,
+            )
+            return response.text.strip()
+        except Exception as e:
+            # IMMEDIATE FALLBACK for quota limits
+            if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e) or "quota" in str(e).lower() or "rate limit" in str(e).lower():
+                raise
+            
+            if attempt < max_retries - 1:
+                print(f"\nTransient error. Waiting {delay:.1f}s before retrying (attempt {attempt + 1}/{max_retries})...")
+                time.sleep(delay)
+                delay *= 1.5
+                continue
+            raise
 
 
 if __name__ == "__main__":

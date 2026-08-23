@@ -1,5 +1,9 @@
 from policy_engine import resolve_policy
 from generator import generate_answer
+from confidence import (
+    check_confidence,
+    is_relevant,
+)
 
 
 def run_assistant(
@@ -17,6 +21,8 @@ def run_assistant(
           ↓
         NEEDS_DATE / RESOLVED / NOT_FOUND
           ↓
+        Confidence Check
+          ↓
         Gemini grounded generation
     """
 
@@ -31,14 +37,40 @@ def run_assistant(
     )
 
     # ---------------------------------------------------------
-    # 2. Policy requires additional date information
-    # ---------------------------------------------------------
+# 2. Check relevance BEFORE asking for a missing date
+# ---------------------------------------------------------
 
     if result["status"] == "NEEDS_DATE":
+
+        top_score = result.get("top_score", 0.0)
+
+        # If the question itself is not relevant to the policy
+        # manual, do NOT ask for a date.
+        #
+        # Example:
+        # "What medication should I take for a headache?"
+        #
+        # A weak policy match should result in ABSTAIN,
+        # not NEEDS_DATE.
+
+        if not is_relevant(top_score):
+
+            message = (
+                "I don't know based on the policy manual.\n\n"
+                "Please ask the Program Supervisor."
+            )
+
+            return {
+                "status": "ABSTAIN",
+                "answer": message,
+                "source": None,
+                "policy": result,
+            }
 
         required_date = result["needs_date"]
 
         if required_date == "determination_date":
+
             message = (
                 "I need the determination date to answer "
                 "this question because the applicable policy "
@@ -46,6 +78,7 @@ def run_assistant(
             )
 
         elif required_date == "change_of_circumstance_date":
+
             message = (
                 "I need the date when the change of "
                 "circumstances occurred because the applicable "
@@ -53,6 +86,7 @@ def run_assistant(
             )
 
         else:
+
             message = (
                 "I need additional date information to "
                 "determine which policy rule applies."
@@ -64,7 +98,6 @@ def run_assistant(
             "source": None,
             "policy": result,
         }
-
     # ---------------------------------------------------------
     # 3. No policy found
     # ---------------------------------------------------------
@@ -87,15 +120,39 @@ def run_assistant(
         }
 
     # ---------------------------------------------------------
-    # 4. Policy successfully resolved
+    # 4. Check confidence score threshold
+    # ---------------------------------------------------------
+
+    if not check_confidence(result):
+        return {
+            "status": "ABSTAIN",
+            "answer": (
+                "I don't know based on the policy manual.\n\n"
+                "Please ask the Program Supervisor."
+            ),
+            "source": None,
+            "policy": result,
+        }
+
+    # ---------------------------------------------------------
+    # 5. Policy successfully resolved and confident
     # ---------------------------------------------------------
 
     applicable_policy = result["applicable"]
 
-    answer = generate_answer(
-        question=question,
-        policy_evidence=applicable_policy,
-    )
+    try:
+        answer = generate_answer(
+            question=question,
+            policy_evidence=applicable_policy,
+        )
+        generation_mode = "gemini"
+    except Exception:
+        from fallback import generate_fallback_answer
+        answer = generate_fallback_answer(
+            question=question,
+            policy_evidence=applicable_policy,
+        )
+        generation_mode = "fallback"
 
     # ---------------------------------------------------------
     # 5. Return final answer
@@ -115,6 +172,7 @@ def run_assistant(
         "answer": answer,
         "source": source,
         "policy": result,
+        "generation_mode": generation_mode,
     }
 
 
