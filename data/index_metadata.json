@@ -1,0 +1,717 @@
+[
+  {
+    "vector_id": 0,
+    "clause_id": "1.1.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 1,
+    "clause_id": "1.1.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 2,
+    "clause_id": "1.1.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 3,
+    "clause_id": "1.2.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 4,
+    "clause_id": "1.2.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 5,
+    "clause_id": "1.2.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 6,
+    "clause_id": "1.3.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 7,
+    "clause_id": "1.3.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 8,
+    "clause_id": "1.3.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 9,
+    "clause_id": "2.1.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 10,
+    "clause_id": "2.1.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 11,
+    "clause_id": "2.1.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 12,
+    "clause_id": "2.2.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 13,
+    "clause_id": "2.2.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 14,
+    "clause_id": "2.3.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 15,
+    "clause_id": "2.3.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 16,
+    "clause_id": "2.4.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 17,
+    "clause_id": "2.4.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 18,
+    "clause_id": "2.4.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 19,
+    "clause_id": "3.1.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 20,
+    "clause_id": "3.1.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 21,
+    "clause_id": "3.1.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 22,
+    "clause_id": "3.2.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 23,
+    "clause_id": "3.2.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 24,
+    "clause_id": "3.2.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 25,
+    "clause_id": "3.2.4",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 26,
+    "clause_id": "3.3.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 27,
+    "clause_id": "3.3.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 28,
+    "clause_id": "4.1.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 29,
+    "clause_id": "4.1.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 30,
+    "clause_id": "4.2.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 31,
+    "clause_id": "4.2.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 32,
+    "clause_id": "4.3.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 33,
+    "clause_id": "4.3.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 34,
+    "clause_id": "4.3.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 35,
+    "clause_id": "4.3.4",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 36,
+    "clause_id": "5.1.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 37,
+    "clause_id": "5.1.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 38,
+    "clause_id": "5.2.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 39,
+    "clause_id": "5.2.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 40,
+    "clause_id": "5.2.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 41,
+    "clause_id": "5.3.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 42,
+    "clause_id": "5.3.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 43,
+    "clause_id": "5.4.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 44,
+    "clause_id": "5.4.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 45,
+    "clause_id": "5.5.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 46,
+    "clause_id": "5.5.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 47,
+    "clause_id": "6.1.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 48,
+    "clause_id": "6.1.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 49,
+    "clause_id": "6.2.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 50,
+    "clause_id": "6.3.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 51,
+    "clause_id": "6.3.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 52,
+    "clause_id": "6.3.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 53,
+    "clause_id": "6.4.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 54,
+    "clause_id": "6.4.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 55,
+    "clause_id": "6.5.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 56,
+    "clause_id": "6.5.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 57,
+    "clause_id": "6.5.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 58,
+    "clause_id": "6.6.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 59,
+    "clause_id": "7.1.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 60,
+    "clause_id": "7.1.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 61,
+    "clause_id": "7.1.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 62,
+    "clause_id": "7.2.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 63,
+    "clause_id": "7.2.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 64,
+    "clause_id": "7.3.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 65,
+    "clause_id": "7.3.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 66,
+    "clause_id": "7.3.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 67,
+    "clause_id": "7.4.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 68,
+    "clause_id": "7.4.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 69,
+    "clause_id": "7.4.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 70,
+    "clause_id": "8.1.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 71,
+    "clause_id": "8.1.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 72,
+    "clause_id": "8.1.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 73,
+    "clause_id": "8.2.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 74,
+    "clause_id": "8.2.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 75,
+    "clause_id": "8.2.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 76,
+    "clause_id": "8.3.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 77,
+    "clause_id": "8.3.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 78,
+    "clause_id": "8.3.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 79,
+    "clause_id": "8.4.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 80,
+    "clause_id": "8.4.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 81,
+    "clause_id": "8.5.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 82,
+    "clause_id": "8.5.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 83,
+    "clause_id": "8.5.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 84,
+    "clause_id": "8.6.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 85,
+    "clause_id": "8.6.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 86,
+    "clause_id": "8.6.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 87,
+    "clause_id": "8.7.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 88,
+    "clause_id": "8.7.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 89,
+    "clause_id": "9.1.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 90,
+    "clause_id": "9.1.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 91,
+    "clause_id": "9.1.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 92,
+    "clause_id": "9.1.4",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 93,
+    "clause_id": "9.1.5",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 94,
+    "clause_id": "9.2.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 95,
+    "clause_id": "9.2.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 96,
+    "clause_id": "9.3.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 97,
+    "clause_id": "9.3.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 98,
+    "clause_id": "9.3.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 99,
+    "clause_id": "9.4.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 100,
+    "clause_id": "9.4.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 101,
+    "clause_id": "9.5.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 102,
+    "clause_id": "9.5.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 103,
+    "clause_id": "9.6.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 104,
+    "clause_id": "9.6.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 105,
+    "clause_id": "10.1.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 106,
+    "clause_id": "10.1.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 107,
+    "clause_id": "10.2.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 108,
+    "clause_id": "10.2.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 109,
+    "clause_id": "10.2.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 110,
+    "clause_id": "10.2.4",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 111,
+    "clause_id": "10.3.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 112,
+    "clause_id": "10.3.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 113,
+    "clause_id": "10.4.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 114,
+    "clause_id": "10.5.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 115,
+    "clause_id": "10.5.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 116,
+    "clause_id": "10.5.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 117,
+    "clause_id": "10.5.4",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 118,
+    "clause_id": "11.1.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 119,
+    "clause_id": "11.1.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 120,
+    "clause_id": "11.1.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 121,
+    "clause_id": "11.2.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 122,
+    "clause_id": "11.2.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 123,
+    "clause_id": "11.2.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 124,
+    "clause_id": "11.3.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 125,
+    "clause_id": "11.3.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 126,
+    "clause_id": "11.4.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 127,
+    "clause_id": "11.4.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 128,
+    "clause_id": "12.1.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 129,
+    "clause_id": "12.1.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 130,
+    "clause_id": "12.1.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 131,
+    "clause_id": "12.2.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 132,
+    "clause_id": "12.2.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 133,
+    "clause_id": "12.2.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 134,
+    "clause_id": "12.3.1",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 135,
+    "clause_id": "12.3.2",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 136,
+    "clause_id": "12.3.3",
+    "source_doc": "Policy Manual"
+  },
+  {
+    "vector_id": 137,
+    "clause_id": "6.4.1(a)",
+    "source_doc": "Amendment No. 2026-01 §1.1"
+  },
+  {
+    "vector_id": 138,
+    "clause_id": "4.3.2",
+    "source_doc": "Amendment No. 2026-01 §2.1"
+  },
+  {
+    "vector_id": 139,
+    "clause_id": "9.1.4",
+    "source_doc": "Amendment No. 2026-01 §2.2"
+  },
+  {
+    "vector_id": 140,
+    "clause_id": "6.6.1",
+    "source_doc": "Amendment No. 2026-01 §3.1"
+  },
+  {
+    "vector_id": 141,
+    "clause_id": "10.5.2",
+    "source_doc": "Amendment No. 2026-01 §4.1"
+  },
+  {
+    "vector_id": 142,
+    "clause_id": "10.5.3A",
+    "source_doc": "Amendment No. 2026-01 §4.2"
+  }
+]
