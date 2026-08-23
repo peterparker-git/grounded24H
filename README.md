@@ -17,22 +17,33 @@ Instead of guessing, the system grounds every answer in actual policy text, trac
 User Question
       |
       v
-FAISS Vector Search (Retrieval)
+FAISS Vector Search
       |
       v
-Policy Resolver (Handles amendments & dates)
-      |-- (Missing Date?) --> Returns NEEDS_DATE
+Policy Resolver
+      |
+      +---- Missing Date? ----> NEEDS_DATE
+      |
       v
 Confidence Check
-      |-- (Low Relevance?) -> Returns ABSTAIN
-      v
-Gemini Answer Generation
-      |-- (API Offline?) ---> Deterministic Fallback
-      v
-Citation Verification
+      |
+      +---- Low Relevance? --> ABSTAIN
       |
       v
-Grounded Answer + Exact Clause
+Answer Generation
+      |
+      +---- Gemini available ------> Gemini
+      |
+      +---- Gemini quota/error ----> Deterministic Fallback
+                                      |
+                                      v
+                              Grounded Response
+                                      |
+                                      v
+                              Citation Verification
+                                      |
+                                      v
+                         Answer + Exact Policy Clause
 ```
 
 ## Example Usage

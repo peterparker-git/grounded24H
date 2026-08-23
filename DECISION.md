@@ -28,16 +28,21 @@ Before answering questions, the system processes raw policy data:
 ### Phase 2: Inference Workflow
 The query execution flows through distinct stages:
 ```text
-Retrieval (FAISS Vector Search) 
-   ↓
-Policy Resolution (Filters out outdated amendments based on date) 
-   ↓
-Confidence Check (Rejects low-relevance queries)
-   ↓
-Answer Generation (Gemini) 
-   ↓
-Citation Verification (Ensures exact clauses are referenced)
+                      Retrieve 
+                         ↓
+                    Resolve Date 
+                         ↓ 
+                  Check Confidence
+                         ↓             
+                  ┌──────┴──────┐
+                  ↓             ↓
+               Reliable      Not Reliable
+                  ↓             ↓
+               Generate       Abstain
+                  ↓
+             Verify Citation
 ```
+By strictly separating these stages, the system's reasoning is completely transparent. The retriever doesn't guess dates, the resolver doesn't hallucinate policy, and the generator doesn't make up citations.
 
 ## 4. Why Policy Resolution is Separate from Retrieval
 
